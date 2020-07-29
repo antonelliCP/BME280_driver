@@ -54,7 +54,7 @@ dev.intf_ptr = &dev_addr;
 dev.intf = BME280_I2C_INTF;
 dev.read = user_i2c_read;
 dev.write = user_i2c_write;
-dev.delay_ms = user_delay_ms;
+dev.delay_ms = user_delay_ms; ##<= THIS LINE SHOULD READ dev.delay_us = user_delay_us; // template should also reference correct connectivity
 
 rslt = bme280_init(&dev);
 ```
